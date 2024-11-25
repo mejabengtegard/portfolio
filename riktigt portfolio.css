@@ -58,7 +58,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   font-weight: bold;
   font-size: 2rem;
   margin-top: 0;
@@ -97,9 +96,7 @@ hr {
   border-top: 3px solid black;
 }
 
-.motionimg,
-.circleimg,
-.mountainimg {
+.img {
   border-radius: 5%;
   object-fit: cover;
   height: 400px;
@@ -107,70 +104,27 @@ hr {
   border: 2px solid black;
 }
 
-.motion {
+.case-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-left: 300px;
-  margin-right: 300px;
+  justify-content: center;
   margin-top: 100px;
+  gap: 50px;
 }
 
-.motioncontainer {
+.case-info {
+  width: 22%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 100px;
+  align-items: center;
 }
 
-.motioncontainer p {
-  width: 300px;
-}
-
-.motioncontainer h2 {
+.case-wrapper h2 {
   font-size: 3rem;
+  line-height: 100%;
 }
 
-.motionpage {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-top: 100px;
-}
-
-.motion h2 {
-  margin-top: 50px;
-  margin-left: 50px;
-  font-size: 3rem;
-}
-
-.motion p {
-  margin-left: 50px;
+.case-wrapper p {
   margin-top: 30px;
-  width: 300px;
-}
-.lofoten {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-top: 100px;
-}
-
-.lofoten h2 {
-  margin-top: 50px;
-  margin-left: 0px;
-  font-size: 3rem;
-}
-.lofoten p {
-  margin-left: 0px;
-  margin-top: 30px;
-  width: 300px;
 }
 
 h1 span:hover {
@@ -180,84 +134,99 @@ h1 span:hover {
 button {
   height: 50px;
   width: 200px;
-  margin-left: 50px;
   margin-top: 50px;
   border-radius: 2px;
   background-color: #d9d3d3;
-  direction: rtl;
 }
 
-.button1:hover {
+.button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button2:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button2 {
-  height: 50px;
-  width: 200px;
-  margin-left: 0px;
-  margin-top: 50px;
-  border-radius: 2px;
-  background-color: #d9d3d3;
 }
 
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 800px;
-  margin-top: 50px;
+  padding-left: 100px;
+  margin-top: 20px;
   padding-bottom: 100px;
 }
 
+.footer h2 {
+  margin-top: 10px;
+}
+
 .contact {
-  padding-left: 100px;
-  padding-top: 50px;
+  padding-top: 20px;
   font-size: 3rem;
 }
 
-@media only screen and (max-width: 800px) {
-  .headertext1,
-  .headertext2,
-  .menu {
-    text-align: center;
-    font-size: 1 rem;
-  }
-
-  .menu {
-    flex-direction: column;
-    font-size: 1 rem;
-  }
-  .circle,
-  .lines {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .headerimage,
-  .headerbottom,
-  .circleimg,
-  .motionimg,
-  .mountainimg {
-    width: 100%;
+@media screen and (max-width: 800px) {
+  * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+  }
+
+  .case-info {
+    width: auto;
+    display: block;
+    text-align: center;
   }
 
   .title h1 {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 3rem;
   }
 
-  .contact {
-    font-size: 20px; /* Adjust contact font size */
+  .worktitles p {
+    margin-top: 10px;
+  }
+
+  .case-wrapper {
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    width: 60vw;
+    justify-self: center;
+  }
+
+  .case-info p,
+  .button {
+    margin-top: 30px;
+  }
+
+  .case-info h2 {
+    margin-top: 40px;
+  }
+
+  .img {
+    scale: 70%;
+    align-self: center;
   }
 
   .footer {
-    flex-direction: column; /* Stack footer items vertically */
-    align-items: center; /* Center footer items */
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .contact {
+    font-size: 2rem;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headertext2 {
+    margin-top: 50px;
   }
 }
